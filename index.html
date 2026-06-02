@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSSAIGC - 博斯企培人工智能研究院 | AI人才与产业生态平台</title>
+    <meta name="description" content="博斯企培人工智能研究院（BOSSAIGC），中国领先的企业AI转型全链路赋能平台。AI人才孵化、AI项目落地、AI应用开发、AI企业数字化转型、AI产业运营。">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Ma+Shan+Zheng&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="nav-brand-group">
+                <a href="index.html" class="nav-logo">
+                    <img src="logo-bossaigc.png" alt="BOSSAIGC" class="nav-logo-icon">
+                    <div class="nav-logo-text">BOSSAIGC</div>
+                </a>
+                <div class="nav-partner-logos">
+                    <img src="logo-aiopc.png" alt="AIOPC" class="partner-logo" title="AIOPC促进发展中心">
+                    <img src="logo-zhihang.png" alt="智航未来" class="partner-logo" title="智航未来">
+                    <img src="logo-zzcepp-text.png" alt="ZZCEPP" class="partner-logo" title="ZZCEPP跨境电商孵化中心">
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">首页</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+                <li><a href="services.html" class="nav-link">核心业务</a></li>
+                <li class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle">业务案例 <svg class="nav-dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></span>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="temu.html">AI+跨境电商孵化陪跑</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html" class="nav-link">新闻中心</a></li>
+                <li><a href="contact.html" class="nav-link">联系我们</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta">商务合作</a>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================== -->
+    <!-- COVER: 全屏画报封面（V10 杂志版） -->
+    <!-- ============================== -->
+    <section class="cover" id="hero">
+
+        <!-- 左上：档案信息 -->
+        <div class="cover-corner cover-corner--tl">
+            <span class="cover-corner-line">ARCHIVE <span class="corner-val">No. 001</span></span>
+            <span class="cover-corner-line">EST. <span class="corner-highlight">2024</span> — <span class="corner-val">Xiamen, China</span></span>
+            <span class="cover-corner-divider"></span>
+            <span class="cover-corner-line">XIAMEN · ZHANGZHOU · FUZHOU</span>
+            <span class="cover-corner-line">BOSSAIGC / <span class="corner-highlight">STELLARIA</span></span>
+        </div>
+
+        <!-- 右上：实时数据 -->
+        <div class="cover-corner cover-corner--tr">
+            <div class="cover-live"><span class="live-dot"></span> LIVE</div>
+            <span class="cover-corner-divider"></span>
+            <span class="cover-corner-line">TARGET <span class="corner-val">50,000+</span></span>
+            <span class="cover-corner-line">PARTNERS <span class="corner-val">3,000+</span></span>
+            <span class="cover-corner-line">CITIES <span class="corner-val">15+</span></span>
+        </div>
+
+        <!-- 中央品牌 — 单栏居中布局 -->
+        <div class="cover-center">
+            <div class="cover-title-block">
+                <div class="cover-edition">VOL. 01 — 2026 ISSUE</div>
+                <span class="cover-title-line cover-title-line--white">BOSS</span>
+                <span class="cover-title-line cover-title-line--gold">AIGC</span>
+                <div class="cover-title-sub">博斯企培人工智能研究院</div>
+                <div class="cover-title-desc">
+                    <span>让AI成为每个人的生产力</span>
+                    <span class="desc-gold">让AI成为企业增长的新引擎</span>
+                </div>
+                <div class="cover-manifesto-inline" data-reveal>
+                    <p class="manifesto-line l1">AI 不再是未来时，而是此刻正在发生的产业革命</p>
+                    <p class="manifesto-line l2">博斯企培以人才培养为根基、以项目落地为驱动、以产业变革为蓝图</p>
+                    <p class="manifesto-line l3">让 AI 穿透每一个行业  ·  赋能每一家企业  ·  成就每一个创业者</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部数据统计栏 -->
+        <div class="cover-stats-bar">
+            <div class="stats-item" data-reveal>
+                <span class="stats-num">50,000<sup>+</sup></span>
+                <span class="stats-label">AI人才</span>
+            </div>
+            <div class="stats-item" data-reveal>
+                <span class="stats-num">3,000<sup>+</sup></span>
+                <span class="stats-label">企业服务</span>
+            </div>
+            <div class="stats-item" data-reveal>
+                <span class="stats-num">15<sup>+</sup></span>
+                <span class="stats-label">城市布局</span>
+            </div>
+            <div class="stats-item" data-reveal>
+                <span class="stats-num">35<sup>%+</sup></span>
+                <span class="stats-label">转化率</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- DIVIDER — 杂志分割线            -->
+    <!-- ============================== -->
+    <div class="mag-divider" data-reveal>
+        <span class="mag-divider-line"></span>
+        <span class="mag-divider-label">SCROLL TO EXPLORE</span>
+        <span class="mag-divider-line"></span>
+    </div>
+
+    <!-- ============================== -->
+    <!-- SCENE IMAGE: 全宽场景主视觉大图     -->
+    <!-- ============================== -->
+    <div class="img-hero" data-reveal>
+        <div class="img-corner img-corner--tl"></div>
+        <div class="img-corner img-corner--tr"></div>
+        <div class="img-corner img-corner--bl"></div>
+        <div class="img-corner img-corner--br"></div>
+        <img src="hero-main-visual.jpg" alt="AI赋能未来 — 博斯企培人工智能研究院" class="img-hero-img">
+        <div class="img-hero-overlay"></div>
+        <span class="img-coord">REC ● 00:00:01</span>
+    </div>
+
+    <!-- ============================== -->
+    <!-- BUSINESS: 五大核心业务            -->
+    <!-- ============================== -->
+    <section class="business-section" id="business">
+        <div class="business-inner">
+            <!-- 杂志章节标记 -->
+            <div class="section-index" data-reveal>02</div>
+            <div class="section-header" data-reveal>
+                <span class="section-label">五大核心业务</span>
+                <h2 class="section-title">构建AI时代全链路赋能体系</h2>
+                <p class="section-desc">围绕AI人才培养、项目落地、应用开发、企业数字化转型及产业运营，打造教育、技术、人才、资本、平台五位一体产业赋能体系</p>
+            </div>
+
+            <div class="biz-list">
+                <!-- 01 AI人才孵化 -->
+                <a href="services.html#talent" class="biz-card" data-reveal style="--blade-color: var(--cyan)">
+                    <div class="biz-card-id">
+                        <span class="biz-card-num">01</span>
+                        <div class="biz-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                    </div>
+                    <div class="biz-card-body">
+                        <h3>AI人才孵化</h3>
+                        <p>打造AI时代人才培养体系，实现学习→实训→认证→就业→创业全链路培养模式</p>
+                        <div class="biz-card-tags">
+                            <span>AI应用工程师</span><span>AI智能体开发师</span><span>AI新媒体运营师</span><span>AI跨境电商运营师</span><span>AI数字营销师</span><span>AI讲师认证</span><span>AI创业合伙人</span>
+                        </div>
+                    </div>
+                    <div class="biz-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                </a>
+
+                <!-- 02 AI项目落地 -->
+                <a href="services.html#project" class="biz-card" data-reveal style="--blade-color: var(--magenta)">
+                    <div class="biz-card-id">
+                        <span class="biz-card-num">02</span>
+                        <div class="biz-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="biz-card-body">
+                        <h3>AI项目落地</h3>
+                        <p>帮助个人和企业快速完成AI商业化应用，实现从学习到盈利的落地闭环</p>
+                        <div class="biz-card-tags">
+                            <span>项目规划</span><span>商业模式设计</span><span>导师陪跑</span><span>项目实训</span><span>流量增长</span><span>资源对接</span>
+                        </div>
+                    </div>
+                    <div class="biz-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                </a>
+
+                <!-- 03 AI应用开发 -->
+                <a href="services.html#aiapp" class="biz-card" data-reveal style="--blade-color: var(--cyan)">
+                    <div class="biz-card-id">
+                        <span class="biz-card-num">03</span>
+                        <div class="biz-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="12" cy="10" r="2"/></svg>
+                        </div>
+                    </div>
+                    <div class="biz-card-body">
+                        <h3>AI应用开发</h3>
+                        <p>打造企业专属AI应用与数字员工体系，帮助企业实现自动化运营与降本增效，让AI成为企业增长的新生产力</p>
+                        <div class="biz-card-tags">
+                            <span>AI客服智能体</span><span>AI销售智能体</span><span>AI运营智能体</span><span>AI培训智能体</span><span>AI知识库智能体</span><span>AI办公智能体</span>
+                        </div>
+                    </div>
+                    <div class="biz-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                </a>
+
+                <!-- 04 AI企业数字化转型 -->
+                <a href="services.html#digital" class="biz-card" data-reveal style="--blade-color: var(--amber)">
+                    <div class="biz-card-id">
+                        <span class="biz-card-num">04</span>
+                        <div class="biz-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="biz-card-body">
+                        <h3>AI企业数字化转型</h3>
+                        <p>为企业提供AI升级解决方案，推动企业迈向智能化经营时代</p>
+                        <div class="biz-card-tags">
+                            <span>AI战略咨询</span><span>AI组织升级</span><span>AI办公自动化</span><span>AI营销自动化</span><span>AI数字员工部署</span>
+                        </div>
+                    </div>
+                    <div class="biz-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                </a>
+
+                <!-- 05 AI产业运营 -->
+                <a href="services.html#industry" class="biz-card" data-reveal style="--blade-color: var(--blue)">
+                    <div class="biz-card-id">
+                        <span class="biz-card-num">05</span>
+                        <div class="biz-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                    </div>
+                    <div class="biz-card-body">
+                        <h3>AI产业运营</h3>
+                        <p>打造区域AI产业生态平台，形成产业发展与人才发展的双向驱动模式</p>
+                        <div class="biz-card-tags">
+                            <span>AI产业园运营</span><span>人才培养基地</span><span>创新创业孵化</span><span>产业招商</span><span>AI生态共建</span>
+                        </div>
+                    </div>
+                    <div class="biz-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- ABOUT: 博斯企培介绍 — 星空宇宙版 -->
+    <!-- ============================== -->
+    <section class="about-universe" id="about">
+        <!-- 粒子星空层 -->
+        <div class="particle-field" aria-hidden="true">
+            <div class="particle p1"></div><div class="particle p2"></div>
+            <div class="particle p3"></div><div class="particle p4"></div>
+            <div class="particle p5"></div><div class="particle p6"></div>
+            <div class="particle p7"></div><div class="particle p8"></div>
+            <div class="particle p9"></div><div class="particle p10"></div>
+            <div class="particle p11"></div><div class="particle p12"></div>
+            <div class="particle p13"></div><div class="particle p14"></div>
+            <div class="particle p15"></div><div class="particle p16"></div>
+            <div class="particle p17"></div><div class="particle p18"></div>
+            <div class="particle p19"></div><div class="particle p20"></div>
+            <div class="particle p21"></div><div class="particle p22"></div>
+            <div class="particle p23"></div><div class="particle p24"></div>
+            <div class="particle p25"></div><div class="particle p26"></div>
+            <div class="particle p27"></div><div class="particle p28"></div>
+            <div class="particle p29"></div><div class="particle p30"></div>
+        </div>
+
+        <div class="about-universe-inner">
+            <!-- 装饰角标 -->
+            <div class="about-corners">
+                <div class="about-corner about-corner--tl"></div>
+                <div class="about-corner about-corner--tr"></div>
+                <div class="about-corner about-corner--bl"></div>
+                <div class="about-corner about-corner--br"></div>
+            </div>
+
+            <!-- 网格线装饰 -->
+            <div class="grid-lines" aria-hidden="true">
+                <div class="grid-line grid-line--h1"></div>
+                <div class="grid-line grid-line--h2"></div>
+                <div class="grid-line grid-line--v1"></div>
+                <div class="grid-line grid-line--v2"></div>
+            </div>
+
+            <!-- 头部 -->
+            <div class="about-header" data-reveal>
+                <span class="section-label section-label--amber">WHO WE ARE</span>
+                <h2 class="section-title about-title">行业深耕者<br><span class="about-title-accent">AI变革先行者</span></h2>
+                <p class="about-subtitle">由人工智能领域资深专家与跨境电商行业领袖联合创立</p>
+            </div>
+
+            <!-- 内容区：左文字 + 右数据 -->
+            <div class="about-split" data-reveal>
+                <!-- 左：公司介绍 -->
+                <div class="about-left">
+                    <div class="about-intro">
+                        <p>博斯企培人工智能研究院（BOSSAIGC）于2024年9月在厦门自贸区成立，总部位于福建漳州。以「<strong class="about-highlight">让AI成为每个人的生产力</strong>」为使命，致力于培养AI实战人才、孵化AI智能项目、赋能企业数字化转型，推动AI技术从实验室走向千行百业。</p>
+                        <p>核心团队拥有<strong>20年</strong>行业深耕经验，由创始人兼法定代表人孙燕（漳州市女企业家联谊会副会长、漳州跨境电商协会执行会长、数字经济人才培训学院金牌讲师）主导AI+OPC创业生态顶层设计，以「品牌、技术、人才孵化、资本」四位一体模式横跨AI跨境电商、漫剧影视等9大产业赛道；联合创始人杨斌（董事长）推动集美大学诚毅学院校企合作与政企协同落地；联合创始人李昱衡（李津）以10年新媒体实战经验及AI品牌宣传专长反哺课程体系，担任漳州数字经济人才培训学院特聘金牌讲师。三人协同，构建"学习→实训→认证→就业→创业"全链路培养体系。</p>
+                        <p>旗下三大实体覆盖闽南金三角：<strong>博斯企培人工智能研究院</strong>（厦门自贸区）承担课程研发与认证输出；<strong>漳州AI+OPC促进发展中心</strong>（龙文区）作为全省首个AI与「一人公司」融合创新载体，已孵化30余个OPC创业项目；<strong>智航未来（福建）智能科技有限公司</strong>（漳州龙文区）负责AI落地与产业运营。</p>
+                        <p>2026年博斯企培获福建日报头版专题报道、中新网深度聚焦，已累计服务<strong>3,000+</strong>企业，孵化<strong>50,000+</strong>AI实战人才，布局<strong>15+</strong>城市——以全链路赋能体系，重新定义AI时代的企业与人才关系。</p>
+                    </div>
+                </div>
+
+                <!-- 右：数据卡片 -->
+                <div class="about-right">
+                    <div class="about-data-card about-data-card--glow">
+                        <span class="about-data-num">2024</span>
+                        <span class="about-data-label">成立年份</span>
+                        <div class="about-data-line"></div>
+                    </div>
+                    <div class="about-data-card">
+                        <span class="about-data-num">50,000<sup>+</sup></span>
+                        <span class="about-data-label">AI实战人才</span>
+                        <div class="about-data-line about-data-line--magenta"></div>
+                    </div>
+                    <div class="about-data-card">
+                        <span class="about-data-num">3,000<sup>+</sup></span>
+                        <span class="about-data-label">服务企业</span>
+                        <div class="about-data-line about-data-line--cyan"></div>
+                    </div>
+                    <div class="about-data-card">
+                        <span class="about-data-num">15<sup>+</sup></span>
+                        <span class="about-data-label">布局城市</span>
+                        <div class="about-data-line about-data-line--green"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 荣誉成就 — 全宽大卡片网格 -->
+            <div class="about-achievements" data-reveal>
+                <div class="achieve-card" style="--accent: var(--cyan)">
+                    <div class="achieve-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                    <h3>数字经济<br>示范单位</h3>
+                    <p>经政府认证的数字经济领域标杆机构，引领区域数字经济产业创新发展</p>
+                </div>
+                <div class="achieve-card" style="--accent: var(--magenta)">
+                    <div class="achieve-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <h3>AI跨境<br>孵化中心</h3>
+                    <p>专注AI+跨境电商领域项目孵化，为企业提供从选品到运营的全链路AI赋能方案</p>
+                </div>
+                <div class="achieve-card" style="--accent: var(--green)">
+                    <div class="achieve-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>漳州跨境<br>电商协会</h3>
+                    <p>漳州跨境电商领域核心行业组织，联合共享资源，推动跨境贸易智能化升级</p>
+                </div>
+                <div class="achieve-card" style="--accent: var(--amber)">
+                    <div class="achieve-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="10" r="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                    <h3>AI人才孵化<br>运营中心</h3>
+                    <p>50000+ AI实战人才培养，200+院校合作，6大认证方向覆盖全AI领域技能</p>
+                </div>
+                <div class="achieve-card" style="--accent: var(--blue)">
+                    <div class="achieve-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                    <h3>全省首个<br>AI+OPC中心</h3>
+                    <p>龙文区政府发起、博斯企培联合运营，构建一人公司创业生态，已孵化30+项目</p>
+                </div>
+                <div class="achieve-card" style="--accent: var(--purple)">
+                    <div class="achieve-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
+                    <h3>官方考证<br>认证基地</h3>
+                    <p>人工智能训练师、互联网营销师、全媒体运营师、电子商务师等国考认证，国家人社认证，补贴最高1800元</p>
+                </div>
+            </div>
+
+            <!-- 三大实体 -->
+            <div class="about-entities" data-reveal>
+                <div class="about-entity-card">
+                    <div class="entity-num">01</div>
+                    <div class="entity-body">
+                        <h4>博斯企培人工智能研究院</h4>
+                        <p>成立于2024年9月，厦门自贸区悦华路10号。注册资本100万元，企业AI转型全链路赋能平台。</p>
+                        <span class="entity-loc">厦门 · 自贸区</span>
+                    </div>
+                </div>
+                <div class="about-entity-card">
+                    <div class="entity-num">02</div>
+                    <div class="entity-body">
+                        <h4>漳州AI+OPC促进发展中心</h4>
+                        <p>全省首个AI与「一人公司」融合创新载体，2026年3月由龙文区政府发起、博斯企培联合运营。</p>
+                        <span class="entity-loc">漳州 · 龙文区</span>
+                    </div>
+                </div>
+                <div class="about-entity-card">
+                    <div class="entity-num">03</div>
+                    <div class="entity-body">
+                        <h4>智航未来智能科技</h4>
+                        <p>2024年7月成立于漳州龙文区，属博斯企培人工智能旗下企业，专注AI技术研发与应用落地。</p>
+                        <span class="entity-loc">漳州 · 龙文区</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 装饰：六边形 -->
+            <div class="hex-deco" aria-hidden="true">
+                <div class="hex hex-1"></div>
+                <div class="hex hex-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- NEWS + CTA                     -->
+    <!-- ============================== -->
+    <section class="news-cta-section" id="news">
+        <div class="news-cta-inner">
+            <div class="section-index section-index--right" data-reveal>04</div>
+            <div class="section-header section-header--center" data-reveal>
+                <span class="section-label section-label--amber">新闻动态</span>
+                <h2 class="section-title">最新资讯</h2>
+            </div>
+            <div class="news-grid" data-reveal>
+                <article class="news-featured">
+                    <div class="news-tag">焦点</div>
+                    <h3>福建日报头条："一人公司"正在漳州破土生长</h3>
+                    <p>福建日报专题报道漳州龙文区OPC创业浪潮，聚焦博斯企培AI+OPC促进发展中心运营模式：政府统筹、国企运营、陪跑孵化，已举办5场培训覆盖200余人，新注册企业30余家，9家店铺已开始出单。</p>
+                    <div class="news-meta">
+                        <a href="https://mp.weixin.qq.com/s/MCLWzxIKeX3akdHtwFBMiw" target="_blank" rel="noopener" class="news-source-link">来源：福建日报漳州观察</a>
+                        <a href="news.html" class="news-link"><span>阅读详情</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                    </div>
+                </article>
+                <div class="news-sidebar">
+                    <a href="https://weixin.sogou.com/weixin?type=2&query=%E5%8D%9A%E6%96%AF%E4%BC%81%E5%9F%B9%20%E6%9D%8E%E6%B4%A5%20%E9%9D%92%E5%B9%B4%E4%BC%81%E4%B8%9A%E5%AE%B6" target="_blank" rel="noopener" class="news-item news-item--link">
+                        <span class="news-date">2026.05</span>
+                        <div class="news-item-body"><h3>青春漳州：博斯企培联合创始人李津为漳州青企协授课，探秘AI新生态</h3><span class="news-source">青春漳州 / 漳州市青企协</span></div>
+                    </a>
+                    <a href="https://www.fj.chinanews.com.cn/news/2026/2026-05-25/584932.html" target="_blank" rel="noopener" class="news-item news-item--link">
+                        <span class="news-date">2026.05</span>
+                        <div class="news-item-body"><h3>中新网：漳州AI+OPC常态化运营，构建"人才+产业"双向驱动</h3><span class="news-source">中新网福建</span></div>
+                    </a>
+                    <a href="https://weixin.sogou.com/weixin?type=2&query=%E6%BC%B3%E5%B7%9E%E5%9B%BD%E8%B5%84%E5%A7%94%20AI%20OPC" target="_blank" rel="noopener" class="news-item news-item--link">
+                        <span class="news-date">2026.03</span>
+                        <div class="news-item-body"><h3>漳州市国资委：全省首个AI与一人公司融合创新载体落地运营</h3><span class="news-source">漳州市国资委</span></div>
+                    </a>
+                    <a href="https://weixin.sogou.com/weixin?type=2&query=%E9%BE%99%E6%96%87%E8%9E%8D%E5%AA%92%20AI%20OPC%20%E5%88%9B%E4%B8%9A%E6%8C%91%E6%88%98%E8%B5%9B" target="_blank" rel="noopener" class="news-item news-item--link">
+                        <span class="news-date">2026.03</span>
+                        <div class="news-item-body"><h3>龙文融媒：漳州AI+OPC跨境电商创业挑战赛启动，最高奖5万</h3><span class="news-source">龙文融媒</span></div>
+                    </a>
+                    <a href="https://www.fujian.gov.cn/zwgk/ztzl/sxzygwzxsgzx/sdjj/szjj/202506/t20250624_6934284.htm" target="_blank" rel="noopener" class="news-item news-item--link">
+                        <span class="news-date">2025.06</span>
+                        <div class="news-item-body"><h3>福建省人民政府官网：漳州跨境电商搭上"AI快车"，博斯企培参与运营</h3><span class="news-source">福建省人民政府</span></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta-block" data-reveal>
+                <h2>携手BOSSAIGC<br>共建<span class="cta-gradient">AI产业生态</span></h2>
+                <p>无论您是想要学习AI技能的个人，还是希望实现AI转型的企业，BOSSAIGC都能为您提供专业的全链路解决方案。</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary"><span>立即咨询</span></a>
+                    <a href="tel:13606916835" class="btn btn-glass"><span>13606916835</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo"><img src="logo-bossaigc.png" alt="BOSSAIGC" class="nav-logo-icon"><div class="nav-logo-text">BOSSAIGC</div></div>
+                    <p class="footer-slogan">培养AI人才 · 孵化AI项目 · 开发AI应用 · 赋能企业增长 · 服务产业升级</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-col">
+                        <h4>快速导航</h4>
+                        <ul>
+                            <li><a href="about.html">关于我们</a></li>
+                            <li><a href="services.html">核心业务</a></li>
+                            <li><a href="temu.html">AI跨境电商孵化</a></li>
+                            <li><a href="news.html">新闻中心</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>运营中心</h4>
+                        <ul>
+                            <li>厦门 · 自贸区悦华路10号1楼111号</li>
+                            <li>漳州 · 龙文区漳华东路333号5楼555</li>
+                            <li>福州 · 台江区榕金大厦7楼</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-col--qr">
+                        <h4>微信联系</h4>
+                        <div class="footer-qr-group">
+                            <div class="footer-qr-card">
+                                <div class="footer-qr-img">
+                                    <div class="footer-qr-placeholder">
+                                        <img src="qr-lijin.jpg" alt="李津微信">
+                                    </div>
+                                </div>
+                                <div class="footer-qr-info">
+                                    <span class="footer-qr-name">李津（李昱衡）</span>
+                                    <span class="footer-qr-phone">18059834186</span>
+                                    <span class="footer-qr-role">产品战略主理人</span>
+                                </div>
+                            </div>
+                            <div class="footer-qr-card">
+                                <div class="footer-qr-img">
+                                    <div class="footer-qr-placeholder">
+                                        <img src="qr-sunyan.jpg" alt="孙燕微信">
+                                    </div>
+                                </div>
+                                <div class="footer-qr-info">
+                                    <span class="footer-qr-name">孙燕</span>
+                                    <span class="footer-qr-phone">13606916835</span>
+                                    <span class="footer-qr-role">创始人 / 法人代表</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 BOSSAIGC · 博斯企培人工智能研究院 · 智航未来（福建）智能科技有限公司 版权所有</p>
+                <p class="footer-credit">制作人：李昱衡 &nbsp; 0代码基础，1天完成从策划到网站落地。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
