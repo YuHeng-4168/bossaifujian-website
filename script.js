@@ -9,6 +9,7 @@ const IS_TOUCH = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 const IS_HOMEPAGE = !!document.querySelector('.cover');
 const IS_ABOUT = !!document.querySelector('.about-universe');
 const CURSOR_COLORS = IS_HOMEPAGE ? '#00FFFF' : IS_ABOUT ? '#00B4FF' : '#FF00FF';
+const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStaggerCards();
   initScrollReveal();
   initStarfield();
-  if (!IS_TOUCH) initCustomCursor();
+  if (!IS_TOUCH && !REDUCED_MOTION) initCustomCursor();
   if (IS_HOMEPAGE) { initDecodeHero(); }
   initDecodeTitles();
   // Partner carousel now uses CSS animation (continuous scroll, no pause on hover)
@@ -54,9 +55,14 @@ function initCustomCursor() {
   let mx = 0, my = 0, cx = 0, cy = 0, tx = 0, ty = 0;
   let animationId = null;
   let isPaused = false;
-  let lastMx = -1, lastMy = -1;  // ✅ 鼠标不动时跳过更新
+  let hasPointer = false;
 
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    hasPointer = true;
+    if (!animationId && !isPaused) animationId = requestAnimationFrame(animate);
+  }, { passive: true });
 
   // ✅ 关键优化：页面隐藏时暂停光标动画（降CPU~20%+）
   document.addEventListener('visibilitychange', () => {
@@ -66,8 +72,7 @@ function initCustomCursor() {
     } else {
       if (isPaused) {
         isPaused = false;
-        lastMx = -1; lastMy = -1;  // 重置，强制下一帧更新
-        animate();
+        if (hasPointer && !animationId) animationId = requestAnimationFrame(animate);
       }
     }
   });
@@ -79,23 +84,18 @@ function initCustomCursor() {
   });
 
   function animate() {
-    if (isPaused) return;
-    // ✅ 鼠标没动就跳过这帧（降CPU~20%）
-    if (mx === lastMx && my === lastMy && cx === mx && cy === my && tx === mx && ty === my) {
-      animationId = requestAnimationFrame(animate);
-      return;
-    }
-    lastMx = mx; lastMy = my;
-
+    animationId = null;
+    if (isPaused || !hasPointer) return;
     cx += (mx - cx) * 0.12;
     cy += (my - cy) * 0.12;
     tx += (mx - tx) * 0.22;
     ty += (my - ty) * 0.22;
     cursor.style.transform = `translate(-50%,-50%) translate3d(${cx}px,${cy}px,0)`;
     trail.style.transform = `translate(-50%,-50%) translate3d(${tx}px,${ty}px,0)`;
-    animationId = requestAnimationFrame(animate);
+    const moving = Math.abs(mx - cx) > 0.1 || Math.abs(my - cy) > 0.1 ||
+      Math.abs(mx - tx) > 0.1 || Math.abs(my - ty) > 0.1;
+    if (moving) animationId = requestAnimationFrame(animate);
   }
-  animate();
 }
 
 /* ==========================================
@@ -105,6 +105,7 @@ function initCustomCursor() {
     STARFIELD — canvas 粒子星空 + 星座连线 (性能优化版 V13)
     ========================================== */
   function initStarfield() {
+    if (REDUCED_MOTION) return;
     const canvas = document.createElement('canvas');
     canvas.className = 'starfield-canvas';
     canvas.style.cssText = 'position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.8;';
@@ -113,6 +114,8 @@ function initCustomCursor() {
     let W, H, stars = [], curves = [], glowSpots = [], time = 0;
     let animationId = null;
     let isPaused = false;
+    let lastFrame = 0;
+    const FRAME_INTERVAL = 1000 / 30;
 
     // 动态粒子数量：根据设备性能自适应
     function getStarCount() {
@@ -153,7 +156,11 @@ function initCustomCursor() {
         phase: Math.random() * Math.PI * 2
       }));
     }
-    window.addEventListener('resize', resize);
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resize, 180);
+    }, { passive: true });
     resize();
 
     // ✅ 关键优化1：页面隐藏时暂停动画（降CPU 90%+）
@@ -161,16 +168,22 @@ function initCustomCursor() {
       if (document.hidden) {
         isPaused = true;
         if (animationId) cancelAnimationFrame(animationId);
+        animationId = null;
       } else {
         if (isPaused) {
           isPaused = false;
-          draw();
+          animationId = requestAnimationFrame(draw);
         }
       }
     });
 
-    function draw() {
+    function draw(now = 0) {
       if (isPaused) return;
+      if (now - lastFrame < FRAME_INTERVAL) {
+        animationId = requestAnimationFrame(draw);
+        return;
+      }
+      lastFrame = now;
       ctx.clearRect(0, 0, W, H);
       time++;
 
@@ -246,7 +259,7 @@ function initCustomCursor() {
       });
       animationId = requestAnimationFrame(draw);
     }
-    draw();
+    animationId = requestAnimationFrame(draw);
   }
 
 /* ==========================================
@@ -284,6 +297,10 @@ function initStaggerCards() {
    首页立即触发，其他页面滚动触发
    ========================================== */
 function scrambleText(el, final, duration = 1800) {
+  if (REDUCED_MOTION) {
+    el.textContent = final;
+    return;
+  }
   const chars = '!@#$%^&*()_+-=[]{}|;:,.<>?/~`ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   const start = performance.now();
   const len = final.length;
@@ -444,4 +461,3 @@ animCSS.textContent = `
   .revealed { animation: slideUp 0.7s cubic-bezier(.16,1,.3,1) forwards; }
 `;
 document.head.appendChild(animCSS);
-
