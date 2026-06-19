@@ -331,7 +331,7 @@ function initDecodeHero() {
 }
 
 function initDecodeTitles() {
-  const titles = document.querySelectorAll('.about-title, .sub-hero h1');
+  const titles = document.querySelectorAll('.about-title, .sub-hero h1:not([data-no-scramble])');
   if (!titles.length) return;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
