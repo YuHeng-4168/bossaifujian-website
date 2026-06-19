@@ -7,9 +7,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: #050914 url('training-hero-media.jpg') center 42% / cover no-repeat;
+    background: #050914 url('training-hero-event-wide.jpg') center center / cover no-repeat;
 }
-.talent-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(2,6,17,.98) 0%, rgba(2,6,17,.9) 41%, rgba(2,6,17,.38) 74%, rgba(2,6,17,.55) 100%), linear-gradient(0deg, #050914 0%, transparent 42%); }
+.talent-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(2,6,17,.97) 0%, rgba(2,6,17,.93) 18%, rgba(2,6,17,.82) 36%, rgba(2,6,17,.62) 52%, rgba(2,6,17,.4) 68%, rgba(2,6,17,.22) 84%, rgba(2,6,17,.14) 100%),
+        linear-gradient(0deg, rgba(2,6,17,.82) 0%, rgba(2,6,17,.18) 38%, rgba(2,6,17,.08) 72%, rgba(2,6,17,.3) 100%);
+}
 .talent-hero-label { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; color: var(--cyan); font: 700 .72rem/1 var(--font-display); letter-spacing: .16em; }
 .talent-hero-label span { width: 32px; height: 1px; background: var(--cyan); box-shadow: 0 0 10px rgba(0,255,255,.45); }
 .talent-hero h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(3.1rem, 5.5vw, 5.3rem); line-height: .98; letter-spacing: -.045em; }
@@ -107,8 +114,8 @@
     .service-tracks { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
-    .talent-hero { min-height: 700px; background-position: 58% center; }
-    .talent-hero::before { background: linear-gradient(90deg, rgba(2,6,17,.96), rgba(2,6,17,.66)), linear-gradient(0deg, #050914, transparent 48%); }
+    .talent-hero { min-height: 700px; background-position: 54% center; }
+    .talent-hero::before { background: linear-gradient(90deg, rgba(2,6,17,.95) 0%, rgba(2,6,17,.78) 58%, rgba(2,6,17,.6) 100%), linear-gradient(0deg, rgba(2,6,17,.88), transparent 52%); }
     .talent-hero .sub-hero-inner { padding-right: 20px !important; padding-left: 20px !important; }
     .talent-hero h1 { font-size: clamp(2.4rem, 11vw, 3.5rem); }
     .talent-hero-label { margin-bottom: 30px; }
