@@ -1906,6 +1906,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     gap: 20px;
     width: 100%;
 }
+.contact-qr-grid--single {
+    grid-template-columns: minmax(0, 280px);
+    justify-content: center;
+}
 .contact-qr-card {
     display: flex;
     flex-direction: column;
