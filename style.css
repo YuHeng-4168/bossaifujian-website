@@ -1885,55 +1885,133 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     box-shadow: 0 0 16px rgba(0, 255, 255, 0.35);
 }
 
-/* 右侧文字 */
+/* ============================
+   右侧文字 — V31 高级感排版
+   层次：姓名(锚点竖条) → 职位(琥珀胶囊) → 简介(引言竖线) → 要点(菱形标记+青色关键词) → 金句(渐变条)
+   ============================ */
 .team-body { min-width: 0; }
+
+/* 1) 姓名 — 左侧青→琥珀渐变竖条作视觉锚点 */
 .team-body .team-head {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.09);
 }
 .team-body .team-head h3 {
+    position: relative;
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: var(--text-primary);
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    padding-left: 15px;
 }
+.team-body .team-head h3::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 3px; height: 24px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, var(--cyan), var(--amber));
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 2) 职位 — 琥珀色胶囊，专业感 */
 .team-body .team-role {
+    display: inline-block;
     font-family: var(--font-tech);
     font-size: 0.72rem;
+    font-weight: 600;
     color: var(--amber);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
+    line-height: 1.5;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(255, 184, 0, 0.09);
+    border: 1px solid rgba(255, 184, 0, 0.22);
 }
+
+/* 3) 简介 — 引言竖线，提亮字号 */
 .team-body .team-intro {
     font-family: var(--font-tech);
-    font-size: 0.78rem;
-    line-height: 1.85;
-    color: var(--text-secondary);
-    margin: 0 0 14px;
+    font-size: 0.86rem;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.86);
+    margin: 0 0 16px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(0, 255, 255, 0.2);
 }
+
+/* 4) 要点 — 青色菱形标记 + 关键词高亮 */
 .team-rows .team-highlights {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 6px 24px;
-    margin: 0 0 14px;
-    padding: 12px 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 9px 28px;
+    margin: 0 0 16px;
+    padding: 16px 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-.team-rows .team-highlights li { font-size: 0.7rem; line-height: 1.7; padding: 2px 0 2px 14px; }
-.team-rows .team-motto { margin: 0 !important; font-size: 0.74rem !important; padding: 10px 14px; }
+.team-rows .team-highlights li {
+    position: relative;
+    font-family: var(--font-tech);
+    font-size: 0.8rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    padding: 2px 0 2px 18px;
+}
+.team-rows .team-highlights li::before {
+    content: "";
+    position: absolute;
+    left: 2px; top: 11px;
+    width: 5px; height: 5px;
+    background: var(--cyan);
+    transform: rotate(45deg);
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.55);
+}
+/* 关键词：青色 + 淡青底 → 重点一目了然 */
+.team-rows .team-highlights li strong {
+    font-weight: 700;
+    color: var(--cyan);
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: rgba(0, 255, 255, 0.08);
+}
+
+/* 5) 金句 — 白色斜体 + 青色竖条 + 渐变背景（覆盖旧 .team-motto） */
+.team-rows .team-motto {
+    margin: 0 !important;
+    font-family: var(--font-tech) !important;
+    font-size: 0.92rem !important;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.75 !important;
+    letter-spacing: 0.8px;
+    color: #FFFFFF !important;
+    padding: 13px 18px !important;
+    border-left: 3px solid var(--cyan) !important;
+    border-radius: 0 8px 8px 0;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.08), rgba(255, 184, 0, 0.035) 55%, transparent) !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 255, 255, 0.05);
+}
 
 @media (max-width: 1100px) {
     .team-row { grid-template-columns: 200px 1fr; gap: 24px; padding: 24px; }
     .team-photo .photo-frame { height: 267px; }
+    .team-body .team-head h3 { font-size: 1.25rem; letter-spacing: 1.5px; }
+    .team-body .team-intro { font-size: 0.82rem; }
+    .team-rows .team-highlights { gap: 8px 20px; }
 }
 @media (max-width: 760px) {
     .team-row { grid-template-columns: 1fr; }
     .team-photo .photo-frame { width: 220px; height: 293px; margin: 0 auto 18px; }
     .team-rows .team-highlights { grid-template-columns: 1fr; }
+    .team-body .team-head h3 { font-size: 1.2rem; }
 }
 
 /* ============================
