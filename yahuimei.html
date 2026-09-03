@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="jduYrhs4AsF4AxdoHTqyuB">
+<head data-page-node-id="GUNeBVEGmbrqtfDJlEtsJH">
+    <meta charset="UTF-8" data-page-node-id="Gdl3L0w8KS8v9LMPIee9CN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="TQJ1ZIhx6cM7U9onn8hwi5">
+    <title>雅汇美 · AI口腔健康美学 - BOSSAIGC</title>
+    <meta name="description" content="雅汇美（YAHUIMEI）——博斯企培孵化的 AI+口腔健康美学品牌。睡美焕白，从齿开始。AI口腔健康诊断、AI智能口腔管家、AI品牌搭建、AI营销获客、AI企业运营管理、AI数字资产，六大 AI 模式全链路赋能。" data-page-node-id="OwpyTdkJn72X98DVB3mbhG">
+    <link rel="stylesheet" href="style.css" data-page-node-id="bi4qsVtOlI24dMTWMBpuca">
+    <link href="https://cdn.jsdelivr.net/npm/misans@4.0.0/lib/Normal/MiSans-Normal.min.css" rel="stylesheet" data-page-node-id="1xGZfBKqvwyjr2cVFblWFi">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" data-page-node-id="2ffAuikx8Ar3L8TyN1E1rO">
+    <style>
+        /* ===== 雅汇美 · 页面专属样式（仅作用于本页，不污染全局） ===== */
+        :root {
+            --yhm-violet: #7B6FDE;
+            --yhm-gold: #D4A843;
+            --yhm-violet-dim: rgba(123, 111, 222, 0.10);
+            --yhm-gold-dim: rgba(212, 168, 67, 0.10);
+        }
+
+        .section-label--violet {
+            background: var(--yhm-violet-dim);
+            border-color: rgba(123, 111, 222, 0.28);
+            color: var(--yhm-violet);
+            text-shadow: 0 0 6px rgba(123, 111, 222, 0.35);
+        }
+        .section-label--gold {
+            background: var(--yhm-gold-dim);
+            border-color: rgba(212, 168, 67, 0.28);
+            color: var(--yhm-gold);
+            text-shadow: 0 0 6px rgba(212, 168, 67, 0.35);
+        }
+
+        .yhm-gold { color: var(--yhm-gold); }
+        .yhm-violet { color: var(--yhm-violet); }
+
+        /* Hero 两栏：左侧文案，右侧「一张图介绍」重点展示 */
+        .yhm-hero-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .yhm-hero-copy h1 { margin-bottom: 18px; }
+        .yhm-slogan {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--yhm-gold);
+            letter-spacing: 0.5px;
+            margin: 18px 0 22px;
+        }
+        .yhm-slogan span { color: var(--text-secondary); font-size: 0.82rem; font-weight: 500; letter-spacing: 1px; }
+
+        .yhm-hero-visual {
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.04);
+            padding: 14px;
+            overflow: hidden;
+            box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+        }
+        .yhm-hero-visual img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: calc(var(--radius-md) - 6px);
+            background: #fff;
+        }
+        .yhm-hero-caption {
+            margin-top: 12px;
+            text-align: center;
+            font-family: var(--font-tech);
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+
+        /* ===== 图文分栏（文字一侧 + 海报一侧） ===== */
+        .yhm-split {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 44px;
+            align-items: center;
+        }
+        .yhm-split--flip { grid-template-columns: 0.85fr 1.15fr; }
+        .yhm-split-poster {
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.04);
+            padding: 12px;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(0,0,0,0.3);
+            max-width: 460px;
+            justify-self: center;
+        }
+        .yhm-split-poster img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: calc(var(--radius-md) - 6px);
+            background: #fff;
+        }
+        .yhm-split-copy .sub-hero-desc { margin-bottom: 14px; }
+        .yhm-lead {
+            font-family: var(--font-tech);
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.9;
+            margin: 0 0 18px;
+        }
+        .yhm-lead strong { color: var(--yhm-gold); }
+
+        /* 要点列表（菱形标记） */
+        .yhm-points { list-style: none; padding: 0; margin: 0; }
+        .yhm-points li {
+            position: relative;
+            padding: 10px 0 10px 26px;
+            font-family: var(--font-tech);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .yhm-points li:last-child { border-bottom: none; }
+        .yhm-points li::before {
+            content: '◆';
+            position: absolute;
+            left: 2px;
+            top: 12px;
+            font-size: 0.6rem;
+            color: var(--yhm-violet);
+        }
+        .yhm-points li strong { color: var(--text-primary); font-weight: 700; }
+
+        /* 五大特点小胶囊 */
+        .yhm-chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+        .yhm-chip {
+            padding: 7px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(123, 111, 222, 0.30);
+            background: var(--yhm-violet-dim);
+            font-family: var(--font-tech);
+            font-size: 0.76rem;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== 产品区 ===== */
+        .yhm-tech-box {
+            padding: 26px 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-left: 3px solid var(--yhm-violet);
+            border-radius: var(--radius-md);
+            margin-bottom: 26px;
+        }
+        .yhm-tech-box h3 {
+            font-size: 1.02rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        .yhm-tech-box p {
+            font-family: var(--font-tech);
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin: 0;
+        }
+        .yhm-unique-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+        .yhm-unique-card {
+            padding: 24px 22px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        .yhm-unique-card:hover { border-color: rgba(212, 168, 67, 0.35); transform: translateY(-3px); }
+        .yhm-unique-card .yhm-unique-tag {
+            display: inline-block;
+            font-family: var(--font-tech);
+            font-size: 0.68rem;
+            letter-spacing: 1.5px;
+            color: var(--yhm-gold);
+            margin-bottom: 10px;
+        }
+        .yhm-unique-card p {
+            font-family: var(--font-tech);
+            font-size: 0.82rem;
+            color: var(--text-primary);
+            line-height: 1.75;
+            margin: 0;
+            font-weight: 600;
+        }
+        .yhm-flow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 26px;
+        }
+        .yhm-flow-step {
+            padding: 20px 18px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            position: relative;
+        }
+        .yhm-flow-step .yhm-step-num {
+            font-family: var(--font-display);
+            font-size: 0.72rem;
+            color: var(--yhm-violet);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .yhm-flow-step h4 {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .yhm-flow-step p {
+            font-family: var(--font-tech);
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+        .yhm-product-line {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .yhm-pl-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px 22px;
+            background: var(--yhm-gold-dim);
+            border: 1px solid rgba(212, 168, 67, 0.25);
+            border-radius: var(--radius-md);
+        }
+        .yhm-pl-item h4 {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--yhm-gold);
+            margin-bottom: 6px;
+        }
+        .yhm-pl-item p {
+            font-family: var(--font-tech);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* 产品样图展示 */
+        .yhm-product-visual {
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            background: rgba(255,255,255,0.04);
+            padding: 12px;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(0,0,0,0.3);
+            max-width: 880px;
+            margin: 0 auto 26px;
+        }
+        .yhm-product-visual img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: calc(var(--radius-md) - 6px);
+            background: #fff;
+        }
+        .yhm-product-caption {
+            margin-top: 10px;
+            text-align: center;
+            font-family: var(--font-tech);
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+
+        /* ===== 案例区 ===== */
+        .yhm-stat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+        .yhm-stat-card {
+            padding: 26px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+        .yhm-stat-card:hover { border-color: rgba(123, 111, 222, 0.35); transform: translateY(-3px); }
+        .yhm-stat-card .yhm-stat-num {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--yhm-gold);
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        .yhm-stat-card .yhm-stat-label {
+            font-family: var(--font-tech);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .yhm-case-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        .yhm-case-card {
+            padding: 24px 26px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+        }
+        .yhm-case-card h4 {
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        .yhm-case-card h4 .yhm-violet { margin-right: 6px; }
+        .yhm-case-card p {
+            font-family: var(--font-tech);
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.85;
+            margin: 0;
+        }
+        .yhm-channel-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+        .yhm-channel-tags .yhm-chip { border-color: rgba(212, 168, 67, 0.30); background: var(--yhm-gold-dim); }
+
+        /* AI 赋能六宫格 */
+        .yhm-ai-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+        .yhm-ai-card {
+            padding: 30px 26px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+        .yhm-ai-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; bottom: 0;
+            width: 2px;
+            background: var(--blade-color, var(--yhm-violet));
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+        .yhm-ai-card:hover { border-color: var(--border-light); transform: translateY(-3px); }
+        .yhm-ai-card:hover::before { opacity: 1; }
+        .yhm-ai-icon {
+            width: 40px; height: 40px;
+            border-radius: var(--radius-md);
+            background: var(--bg-glass);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: var(--blade-color, var(--yhm-violet));
+        }
+        .yhm-ai-icon svg { width: 18px; height: 18px; }
+        .yhm-ai-card h3 { font-size: 0.92rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
+        .yhm-ai-card p { font-family: var(--font-tech); font-size: 0.76rem; color: var(--text-secondary); line-height: 1.8; }
+
+        /* 合规声明 */
+        .yhm-disclaimer {
+            margin-top: 40px;
+            padding: 20px 24px;
+            border: 1px solid rgba(212, 168, 67, 0.25);
+            border-left: 3px solid var(--yhm-gold);
+            border-radius: var(--radius-md);
+            background: var(--yhm-gold-dim);
+            font-family: var(--font-tech);
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .yhm-disclaimer strong { color: var(--yhm-gold); }
+
+        @media (max-width: 1100px) {
+            .yhm-hero-grid { grid-template-columns: 1fr; }
+            .yhm-hero-visual { max-width: 720px; margin: 0 auto; }
+            .yhm-split, .yhm-split--flip { grid-template-columns: 1fr; gap: 28px; }
+            .yhm-split--flip .yhm-split-poster { order: -1; }
+            .yhm-unique-grid { grid-template-columns: 1fr; }
+            .yhm-flow { grid-template-columns: repeat(2, 1fr); }
+            .yhm-stat-grid { grid-template-columns: repeat(2, 1fr); }
+            .yhm-case-row { grid-template-columns: 1fr; }
+            .yhm-ai-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 760px) {
+            .yhm-flow { grid-template-columns: 1fr; }
+            .yhm-stat-grid { grid-template-columns: 1fr; }
+            .yhm-ai-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body data-page-node-id="qfY6iLOdqkHO8K9I2FDBKj">
+
+    <nav class="navbar" id="navbar" data-page-node-id="IoW6FVnWvxTF6JK9BNxYqH">
+        <div class="nav-inner" data-page-node-id="k6Dpysx9WfRmrt8cmrbJQr">
+            <div class="nav-brand-group" data-page-node-id="F85p481CkbNl1SxjYFICcp">
+                <a href="index.html" class="nav-logo" data-page-node-id="dTMkgM9jpBbWEzGhKGom1x">
+                    <img src="logo-bossaigc.png" alt="BOSSAIGC" class="nav-logo-icon" data-page-node-id="noNRw85fuohnzXFB43XhHJ">
+                    <div class="nav-logo-text" data-page-node-id="hkxasAPJaoQW1Hzt8pkCBp">BOSSAIGC</div>
+                </a>
+                <div class="nav-partner-logos" data-page-node-id="ZPNj3mNyiUY5m2NlshxqF5">
+                    <img src="logo-aiopc.png" alt="AIOPC" class="partner-logo" title="AIOPC促进发展中心" data-page-node-id="ONv5VRHx6rPL3hEYqBuHiG">
+                    <img src="logo-zhihang.png" alt="智航未来" class="partner-logo" title="智航未来" data-page-node-id="ltjcjHoIBWEyusT097Xr8g">
+                    <img src="logo-zzcepp-text.png" alt="ZZCEPP" class="partner-logo" title="ZZCEPP跨境电商孵化中心" data-page-node-id="1T1Rz9VsjRpdBrF18k0oo3">
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu" data-page-node-id="8ng3EVmlhbgDZRDGBBEqpn">
+                <li data-page-node-id="j5Q4wcEcrqYWVmezkBUeiQ"><a href="index.html" class="nav-link" data-page-node-id="LJr9GvxOR1nKjSdvgETgQq">首页</a></li>
+                <li data-page-node-id="yvF5erl01ddUL0DvxzSPa8"><a href="about.html" class="nav-link" data-page-node-id="93BtbFc8IsElDgbGXets8h">关于我们</a></li>
+                <li data-page-node-id="28skouIDnW5BGbeBxsRp8k"><a href="services.html" class="nav-link" data-page-node-id="2Os9KHNgQLk0ucUj4aF1AD">核心业务</a></li>
+                <li class="nav-dropdown" data-page-node-id="e8QSdgPd6VeChLbPRALFAu">
+                    <span class="nav-link nav-dropdown-toggle active-dd" data-page-node-id="fVGR39w8U0ZC3MqMRrsP1e">业务案例 <svg class="nav-dd-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-page-node-id="PLgk7lB1UAcRMG7oMYS5H0"><polyline points="6 9 12 15 18 9" data-page-node-id="P5EHp2gIEX8MKJqee0B4vS"/></svg></span>
+                    <ul class="nav-dropdown-menu" data-page-node-id="iRtaYxoHShEJCtLYaogdTk">
+                        <li data-page-node-id="JoR2GAMKPd4YzuiRBBoAwR"><a href="talent-incubation.html" data-page-node-id="n3tiYx1TiqeVVuq12mykar">AI人才孵化与课程实训</a></li>
+                        <li data-page-node-id="w3YEdFxnnxwLPyzJg8W9Ge"><a href="temu.html" data-page-node-id="GcDlZkFckeY8QHYaQfJRrt">AI+跨境电商孵化陪跑</a></li>
+                        <li data-page-node-id="UKvX4CaiMLk9xmRfkWKHgt"><a href="yahuimei.html" data-page-node-id="UVy9tSZRKBs8vCtVAOq8iF">雅汇美 · AI口腔健康美学</a></li>
+                    </ul>
+                </li>
+                <li data-page-node-id="gkRLzQC0b9Cfg1kKzCkN66"><a href="news.html" class="nav-link" data-page-node-id="irT5ZjAzy76vDWgGMh1ZN0">新闻中心</a></li>
+                <li data-page-node-id="K6EKBBiDsnR8Vo0VCwC9Hk"><a href="contact.html" class="nav-link" data-page-node-id="bNEUdoBeoGw9g6QY7XR4i8">联系我们</a></li>
+            </ul>
+            <a href="contact.html" class="nav-cta" data-page-node-id="AjiZGAI0baL43R5FDDqcyn">商务合作</a>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单" data-page-node-id="qr7dI9EsHaGlQyE72VpJls"><span data-page-node-id="gSFprOTzrIEdzGZCLSW744"></span><span data-page-node-id="pLScBQs0xun1eFKaKnFe1F"></span><span data-page-node-id="9VcBedFj047PoDsAW6VgQU"></span></button>
+        </div>
+    </nav>
+
+    <!-- Hero：项目定位 + 一张图介绍重点展示 -->
+    <section class="sub-hero yhm-hero" data-page-node-id="mMBCL2RGR9N7zukb61TSsU">
+        <div class="sub-hero-inner" style="max-width:var(--max-width);margin:0 auto;padding:0 48px;width:100%;position:relative;z-index:1;" data-page-node-id="2OAAlJkcD4wvVVL2CrDHtw">
+            <div class="yhm-hero-grid" data-page-node-id="wFN6vPB1RmdG1Oubxbr9YA">
+                <div class="yhm-hero-copy" data-page-node-id="fSvjVBUgBCkF74EMfthXd7">
+                    <div class="sub-hero-top" data-page-node-id="Ac2L3BFrt5ouMNNTOLonAH">
+                        <div class="sub-hero-crumb" data-page-node-id="1Bu0K2a7unM1qCGgDwfF68">业务案例 / AI口腔健康美学</div>
+                        <div class="sub-hero-data" data-page-node-id="lV7lgwetbe5i4QsgERujiA">BRAND: YAHUIMEI<br data-page-node-id="km0Z6RW0ThpfheD7t3d5hb">STATUS: ACTIVE</div>
+                    </div>
+                    <h1 data-page-node-id="yERGxD5yyaCc7adMT9tAaA">雅汇美 · <span class="yhm-gold" data-page-node-id="ernCbYSplSDRM4cyuG7qAo">AI口腔健康美学</span></h1>
+                    <p class="sub-hero-desc" data-page-node-id="apM4eWTI7CGR3m59ss9TLR">雅汇美（YAHUIMEI）是<strong data-page-node-id="Xprr3JdnAMJeNOlPdiyOux">博斯企培孵化的「AI + 口腔健康美学」项目</strong>——专注口腔美学与健康管理，融合科学护理、美学理念与微笑管理，以 AI 全链路能力打造的新一代美业品牌。</p>
+                    <p class="yhm-slogan" data-page-node-id="IKdGRjt7HdykW6d0bKcI2Q">「睡美焕白，从齿开始」<span data-page-node-id="ztQ9CwwMRqvlWPaY9MfLBZ"> —— 让每一次微笑，都更有质感</span></p>
+                    <div class="sub-hero-line" data-page-node-id="ldh9ZGeW6gHCN2KHfDKblT"></div>
+                </div>
+                <div class="yhm-hero-visual" data-page-node-id="QxuDx5bYsJychAX8DkrO4U">
+                    <img src="yahuimei-one-pic.jpg" alt="2026美业 一张图介绍：从齿开始" loading="eager" data-page-node-id="X3GoO4HejgaMfHOxcprjx1">
+                    <div class="yhm-hero-caption" data-page-node-id="cE5vNq1LwTzYpR8sXaJk3U">2026美业 · 最靠谱的轻资产颜值经济项目——「从齿开始」</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- 01 雅汇美是什么                  -->
+    <!-- ============================== -->
+    <section class="sub-section" data-page-node-id="io8xq4cuFIz9r2q42eeqMN">
+        <div class="sub-section-inner" data-page-node-id="KtHxuZkEDN53EHsPS7p8rH">
+            <div class="biz-header" data-reveal data-page-node-id="DXOe539Dw3H1GZSX9wlaXG">
+                <div class="biz-num-badge" style="background:rgba(123,111,222,0.10);border-color:rgba(123,111,222,0.25);color:#7B6FDE;" data-page-node-id="aHYmHUlwc6zIMfuEWRoAqm">01</div>
+                <div class="biz-header-content" data-page-node-id="7Q6IH48CAoJ14pxHoltZ5K">
+                    <span class="section-label section-label--violet" data-page-node-id="XVin5DnhVeZVZYfpO1PVHa">品牌介绍</span>
+                    <h2 data-page-node-id="ybBWUNIBZZdo1CWdvlE6uv">雅汇美是什么</h2>
+                </div>
+            </div>
+
+            <div class="yhm-split" data-reveal data-page-node-id="split-about">
+                <div class="yhm-split-copy" data-page-node-id="split-about-copy">
+                    <p class="yhm-lead" data-page-node-id="about-lead"><strong data-page-node-id="about-lead-strong">AI口腔健康美学 —— 睡美焕白，从齿开始。</strong></p>
+                    <p class="sub-hero-desc" data-page-node-id="about-desc">雅汇美专注于口腔美学与健康管理，融合科学护理、美学理念与微笑管理，为现代消费者提供自然、舒适、精致的焕白体验。</p>
+                    <ul class="yhm-points" data-page-node-id="about-points">
+                        <li data-page-node-id="about-p1"><strong>温和焕白</strong> —— 温和配方，安心亮白</li>
+                        <li data-page-node-id="about-p2"><strong>自然透亮</strong> —— 改善色泽，透亮自然</li>
+                        <li data-page-node-id="about-p3"><strong>舒适体验</strong> —— 清新舒适，轻松护理</li>
+                        <li data-page-node-id="about-p4"><strong>AI微笑评估</strong> —— 智能评估，定制美笑方案</li>
+                        <li data-page-node-id="about-p5"><strong>长效护理管理</strong> —— 科学护理，长效维持</li>
+                    </ul>
+                    <p class="sub-hero-desc" data-page-node-id="about-close" style="margin-top:18px;">让每一次微笑，都更有质感。</p>
+                </div>
+                <figure class="yhm-split-poster" data-page-node-id="split-about-poster">
+                    <img src="yahuimei-about.jpg" alt="雅汇美介绍：AI口腔健康美学，睡美焕白从齿开始" loading="lazy" data-page-node-id="about-img">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- 02 雅汇美的理念                  -->
+    <!-- ============================== -->
+    <section class="sub-section sub-section--alt" data-page-node-id="sec-idea">
+        <div class="sub-section-inner" data-page-node-id="idea-inner">
+            <div class="biz-header" data-reveal data-page-node-id="idea-header">
+                <div class="biz-num-badge" style="background:rgba(212,168,67,0.10);border-color:rgba(212,168,67,0.25);color:#D4A843;" data-page-node-id="idea-num">02</div>
+                <div class="biz-header-content" data-page-node-id="idea-content">
+                    <span class="section-label section-label--gold" data-page-node-id="idea-label">品牌理念</span>
+                    <h2 data-page-node-id="idea-h2">雅汇美的理念</h2>
+                    <p data-page-node-id="idea-sub">自然透亮，更重视舒适体验与长期口腔美学管理。</p>
+                </div>
+            </div>
+
+            <div class="yhm-split yhm-split--flip" data-reveal data-page-node-id="split-idea">
+                <figure class="yhm-split-poster" data-page-node-id="idea-poster">
+                    <img src="yahuimei-why-gentle.jpg" alt="为什么雅汇美不伤牙" loading="lazy" data-page-node-id="idea-img">
+                </figure>
+                <div class="yhm-split-copy" data-page-node-id="idea-copy">
+                    <p class="sub-hero-desc" data-page-node-id="idea-desc">雅汇美坚持温和护理的逻辑，不走刺激捷径，更注重自然提亮与舒适体验，帮助你科学管理牙色，守护牙齿健康，让每一次微笑更自信从容。<strong data-page-node-id="idea-strong">不是越刺激越有效，自然、安全、舒适更重要。</strong></p>
+                    <ul class="yhm-points" data-page-node-id="idea-points">
+                        <li data-page-node-id="idea-i1"><strong>温和护理逻辑</strong> —— 避免过度刺激，坚持温和配方，守护牙齿健康</li>
+                        <li data-page-node-id="idea-i2"><strong>自然提亮牙色</strong> —— 逐步提亮，呈现自然通透的亮白效果</li>
+                        <li data-page-node-id="idea-i3"><strong>分阶护理微笑美学</strong> —— 分阶段护理，量身定制方案，兼顾牙齿护理与微笑美学的长期维护</li>
+                    </ul>
+                    <div class="yhm-chip-row" data-page-node-id="idea-chips">
+                        <span class="yhm-chip" data-page-node-id="idea-c1">温和安心 · 守护牙釉质与牙龈健康</span>
+                        <span class="yhm-chip" data-page-node-id="idea-c2">自然通透 · 呈现自然亮白</span>
+                        <span class="yhm-chip" data-page-node-id="idea-c3">舒适体验 · 低敏轻松无负担</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- 03 雅汇美的产品                  -->
+    <!-- ============================== -->
+    <section class="sub-section" data-page-node-id="sec-product">
+        <div class="sub-section-inner" data-page-node-id="product-inner">
+            <div class="biz-header" data-reveal data-page-node-id="product-header">
+                <div class="biz-num-badge" style="background:rgba(123,111,222,0.10);border-color:rgba(123,111,222,0.25);color:#7B6FDE;" data-page-node-id="product-num">03</div>
+                <div class="biz-header-content" data-page-node-id="product-content">
+                    <span class="section-label section-label--violet" data-page-node-id="product-label">产品体系</span>
+                    <h2 data-page-node-id="product-h2">雅汇美的产品</h2>
+                    <p data-page-node-id="product-sub">等离子无损美白 —— 不酸 / 不痛 / 不伤牙，进入无损焕白新时代。</p>
+                </div>
+            </div>
+
+            <figure class="yhm-product-visual" data-reveal data-page-node-id="product-visual">
+                <img src="yahuimei-product.jpg" alt="雅汇美产品：睡美焕白·从齿开始" loading="lazy" data-page-node-id="product-visual-img">
+                <figcaption class="yhm-product-caption" data-page-node-id="product-visual-cap">雅汇美 · 牙齿焕美护理精华 —— 让每一次微笑，都有高级感</figcaption>
+            </figure>
+
+            <div class="yhm-tech-box" data-reveal data-page-node-id="product-tech">
+                <h3 data-page-node-id="tech-h3">第三代全新技术 · 等离子无损美白</h3>
+                <p data-page-node-id="tech-p">传统牙齿美白依靠高浓度 HP 化学漂白，副作用和技术缺陷是酸、疼、伤牙；「脱敏的不酸不痛」并不等于不伤牙。雅汇美通过等离子设备和技术，摆脱了对高浓度 HP 的依赖——等离子设备现场激活出大量羟自由基，深层分解分子级色素基团，核心特点是真正不伤牙的安全美白。</p>
+            </div>
+
+            <div class="yhm-unique-grid" data-reveal data-page-node-id="product-unique">
+                <div class="yhm-unique-card" data-page-node-id="unique-1">
+                    <span class="yhm-unique-tag" data-page-node-id="unique-1-tag">目前全球唯一 · 1</span>
+                    <p data-page-node-id="unique-1-p">真正不伤牙的专业美白产品</p>
+                </div>
+                <div class="yhm-unique-card" data-page-node-id="unique-2">
+                    <span class="yhm-unique-tag" data-page-node-id="unique-2-tag">目前全球唯一 · 2</span>
+                    <p data-page-node-id="unique-2-p">过氧化氢浓度仅 2.8% 的专业美白产品</p>
+                </div>
+                <div class="yhm-unique-card" data-page-node-id="unique-3">
+                    <span class="yhm-unique-tag" data-page-node-id="unique-3-tag">目前全球唯一 · 3</span>
+                    <p data-page-node-id="unique-3-p">椅旁等离子设备现场激活的专业美白产品</p>
+                </div>
+            </div>
+
+            <div class="yhm-flow" data-reveal data-page-node-id="product-flow">
+                <div class="yhm-flow-step" data-page-node-id="flow-1">
+                    <span class="yhm-step-num" data-page-node-id="flow-1-num">STEP 01</span>
+                    <h4 data-page-node-id="flow-1-h">三次等离子焕白</h4>
+                    <p data-page-node-id="flow-1-p">3 × 20 分钟现场激活焕白，午休式 1 小时</p>
+                </div>
+                <div class="yhm-flow-step" data-page-node-id="flow-2">
+                    <span class="yhm-step-num" data-page-node-id="flow-2-num">STEP 02</span>
+                    <h4 data-page-node-id="flow-2-h">一次封釉</h4>
+                    <p data-page-node-id="flow-2-p">10~20 分钟封釉，保护 / 提亮牙釉面</p>
+                </div>
+                <div class="yhm-flow-step" data-page-node-id="flow-3">
+                    <span class="yhm-step-num" data-page-node-id="flow-3-num">STEP 03</span>
+                    <h4 data-page-node-id="flow-3-h">全程舒适</h4>
+                    <p data-page-node-id="flow-3-p">过程中三次起身活动、清洁口腔，不酸不痛</p>
+                </div>
+                <div class="yhm-flow-step" data-page-node-id="flow-4">
+                    <span class="yhm-step-num" data-page-node-id="flow-4-num">STEP 04</span>
+                    <h4 data-page-node-id="flow-4-h">色阶提升</h4>
+                    <p data-page-node-id="flow-4-p">1 瓶可提升 2~8 个色阶，3 瓶可达原生白</p>
+                </div>
+            </div>
+
+            <div class="yhm-product-line" data-reveal data-page-node-id="product-line">
+                <div class="yhm-pl-item" data-page-node-id="pl-1">
+                    <h4 data-page-node-id="pl-1-h">3 瓶 · 原生白</h4>
+                    <p data-page-node-id="pl-1-p">1 瓶 3×20 分钟 + 15 分钟封釉，可提升 2-8 个色阶，3 瓶可达到原生白</p>
+                </div>
+                <div class="yhm-pl-item" data-page-node-id="pl-2">
+                    <h4 data-page-node-id="pl-2-h">1 瓶 · 即刻白</h4>
+                    <p data-page-node-id="pl-2-p">即刻焕白体验，快速亮齿</p>
+                </div>
+                <div class="yhm-pl-item" data-page-node-id="pl-3">
+                    <h4 data-page-node-id="pl-3-h">5 瓶 · 专攻氟斑牙</h4>
+                    <p data-page-node-id="pl-3-p">针对氟斑牙人群的分阶护理方案</p>
+                </div>
+            </div>
+
+            <div class="yhm-disclaimer" data-reveal data-page-node-id="product-safe" style="margin-top:26px;">
+                <strong data-page-node-id="safe-strong">安全背书：</strong>雅汇美 HP≤3%（真 ≤3% HP，真安全，不愚弄）——按国家标准，牙齿焕白材料中过氧化物含量大于 3.0% 按三类医疗器械管理，≤3.0% 则不作为医疗器械管理。产品通过欧盟 CE 认证（眼角膜浸入无刺激性）与美国 FDA 注册认证（经口摄入无毒性）；扫描电镜结果表明，产品对牙齿釉质的天然物理结构无明显变化。
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- 04 雅汇美案例                    -->
+    <!-- ============================== -->
+    <section class="sub-section sub-section--alt" data-page-node-id="sec-case">
+        <div class="sub-section-inner" data-page-node-id="case-inner">
+            <div class="biz-header" data-reveal data-page-node-id="case-header">
+                <div class="biz-num-badge" style="background:rgba(212,168,67,0.10);border-color:rgba(212,168,67,0.25);color:#D4A843;" data-page-node-id="case-num">04</div>
+                <div class="biz-header-content" data-page-node-id="case-content">
+                    <span class="section-label section-label--gold" data-page-node-id="case-label">市场与案例</span>
+                    <h2 data-page-node-id="case-h2">雅汇美案例</h2>
+                    <p data-page-node-id="case-sub">百亿级美白赛道 × 口碑复利的真实客户传播。</p>
+                </div>
+            </div>
+
+            <div class="yhm-stat-grid" data-reveal data-page-node-id="case-stats">
+                <div class="yhm-stat-card" data-page-node-id="stat-1">
+                    <div class="yhm-stat-num" data-page-node-id="stat-1-num">111.35 亿</div>
+                    <div class="yhm-stat-label" data-page-node-id="stat-1-label">2025 年中国牙齿美白赛道市场规模（元）</div>
+                </div>
+                <div class="yhm-stat-card" data-page-node-id="stat-2">
+                    <div class="yhm-stat-num" data-page-node-id="stat-2-num">8.62%</div>
+                    <div class="yhm-stat-label" data-page-node-id="stat-2-label">全球诊室美白细分赛道年复合增长率</div>
+                </div>
+                <div class="yhm-stat-card" data-page-node-id="stat-3">
+                    <div class="yhm-stat-num" data-page-node-id="stat-3-num">2~8 <span style="font-size:0.9rem;">色阶</span></div>
+                    <div class="yhm-stat-label" data-page-node-id="stat-3-label">单次完整焕白流程可提升色阶</div>
+                </div>
+                <div class="yhm-stat-card" data-page-node-id="stat-4">
+                    <div class="yhm-stat-num" data-page-node-id="stat-4-num">1 小时</div>
+                    <div class="yhm-stat-label" data-page-node-id="stat-4-label">午休式焕白 · 3 次焕白 + 1 次封釉</div>
+                </div>
+            </div>
+
+            <div class="yhm-case-row" data-reveal data-page-node-id="case-row">
+                <div class="yhm-case-card" data-page-node-id="case-card-1">
+                    <h4 data-page-node-id="case-card-1-h"><span class="yhm-violet">◆</span>口碑复利 · 好口碑自己会说话</h4>
+                    <p data-page-node-id="case-card-1-p">「不酸不痛，轻松焕白！等离子技术让我白到发光」「敏敏星人狂喜！低浓度 HP 超温和，白魔法过后牙齿润泽光滑，终于敢露齿笑啦」「咖啡渍救星！等离子激活的美白因子超给力，顽固着色明显改善」——来自真实客户的体验记录。</p>
+                </div>
+                <div class="yhm-case-card" data-page-node-id="case-card-2">
+                    <h4 data-page-node-id="case-card-2-h"><span class="yhm-gold">◆</span>真实客户传播</h4>
+                    <p data-page-node-id="case-card-2-p">真实客户体验内容持续覆盖朋友圈、小红书、视频号、抖音、美团、大众点评等渠道，让好口碑自己会说话。</p>
+                    <div class="yhm-channel-tags" data-page-node-id="case-channels">
+                        <span class="yhm-chip" data-page-node-id="ch-1">朋友圈</span>
+                        <span class="yhm-chip" data-page-node-id="ch-2">小红书</span>
+                        <span class="yhm-chip" data-page-node-id="ch-3">视频号</span>
+                        <span class="yhm-chip" data-page-node-id="ch-4">抖音</span>
+                        <span class="yhm-chip" data-page-node-id="ch-5">美团</span>
+                        <span class="yhm-chip" data-page-node-id="ch-6">大众点评</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- 05 为什么选择雅汇美              -->
+    <!-- ============================== -->
+    <section class="sub-section" data-page-node-id="sec-why">
+        <div class="sub-section-inner" data-page-node-id="why-inner">
+            <div class="biz-header" data-reveal data-page-node-id="why-header">
+                <div class="biz-num-badge" style="background:rgba(123,111,222,0.10);border-color:rgba(123,111,222,0.25);color:#7B6FDE;" data-page-node-id="why-num">05</div>
+                <div class="biz-header-content" data-page-node-id="why-content">
+                    <span class="section-label section-label--violet" data-page-node-id="why-label">六大理由</span>
+                    <h2 data-page-node-id="why-h2">为什么选择雅汇美</h2>
+                    <p data-page-node-id="why-sub">不止让牙齿变白，更让你安心变美。</p>
+                </div>
+            </div>
+
+            <div class="yhm-split" data-reveal data-page-node-id="split-why">
+                <div class="yhm-split-copy" data-page-node-id="why-copy">
+                    <ul class="yhm-points" data-page-node-id="why-points">
+                        <li data-page-node-id="why-1"><strong>专注口腔美学 15 年</strong> —— 专业口腔美学团队研发，科学配方更安心</li>
+                        <li data-page-node-id="why-2"><strong>不伤牙 不刺激</strong> —— 温和配方，呵护牙釉质，敏感牙也能放心用</li>
+                        <li data-page-node-id="why-3"><strong>自然焕白 立竿见影</strong> —— 深入齿面源头瓦解色素，还原牙齿自然亮白光泽</li>
+                        <li data-page-node-id="why-4"><strong>安全成分 口腔级标准</strong> —— 严选优质成分，口腔可用，孕妇及术后人群亦可使用</li>
+                        <li data-page-node-id="why-5"><strong>分阶护理 长效维持</strong> —— 分阶段改善牙色，长效维持亮白效果</li>
+                        <li data-page-node-id="why-6"><strong>贴心服务 全程陪伴</strong> —— 专业顾问 1 对 1 指导，从使用到效果全程跟踪</li>
+                    </ul>
+                    <p class="yhm-lead" data-page-node-id="why-close" style="margin-top:20px;">选择雅汇美，选择<strong>安心与美丽兼得</strong>。</p>
+                </div>
+                <figure class="yhm-split-poster" data-page-node-id="why-poster">
+                    <img src="yahuimei-why-choose.jpg" alt="为什么选择雅汇美" loading="lazy" data-page-node-id="why-img">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== -->
+    <!-- 06 博斯企培搭建的雅汇美 AI 六大模式 -->
+    <!-- ============================== -->
+    <section class="sub-section sub-section--alt" data-page-node-id="RjIYVYCxEW4KXN7IeUu5GE">
+        <div class="sub-section-inner" data-page-node-id="unK1r2k1GRpuDzTQ689oOM">
+            <div class="biz-header" data-reveal data-page-node-id="xSVxpwiobktkEuyBihJgJS">
+                <div class="biz-num-badge" style="background:rgba(212,168,67,0.10);border-color:rgba(212,168,67,0.25);color:#D4A843;" data-page-node-id="4ZgJyTHktzATbuAmn2vR8e">06</div>
+                <div class="biz-header-content" data-page-node-id="qTgq0jIc3hOyEPansmBQ1G">
+                    <span class="section-label section-label--gold" data-page-node-id="XSHwS5oae3LPdbP1F6RwT0">AI 赋能</span>
+                    <h2 data-page-node-id="PPLLUnxEDfbwRs8kjMKEb9">博斯企培搭建的雅汇美 AI 六大模式</h2>
+                    <p data-page-node-id="W6EQDBGHjHOVB3A3ITto2P">把 AI 能力落到口腔健康美学的诊断、服务、品牌、运营与资产全链路。</p>
+                </div>
+            </div>
+
+            <div class="yhm-ai-grid" data-reveal data-page-node-id="P5hhrW7VHMPqrN1hL57aDV">
+                <div class="yhm-ai-card" style="--blade-color:#7B6FDE" data-page-node-id="card-ai-diagnosis">
+                    <div class="yhm-ai-icon" data-page-node-id="icon-ai-diagnosis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-page-node-id="svg-ai-diagnosis"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2z" data-page-node-id="p1"/><path d="M8 12h.01M12 12h.01M16 12h.01" data-page-node-id="p2"/></svg></div>
+                    <h3 data-page-node-id="h-ai-diagnosis">AI 口腔健康诊断</h3>
+                    <p data-page-node-id="p-ai-diagnosis">基于 AI 图像识别与数据分析，辅助评估牙齿色阶、牙釉质状态与口腔美学风险，让诊断更客观、可视化。</p>
+                </div>
+                <div class="yhm-ai-card" style="--blade-color:#D4A843" data-page-node-id="card-ai-steward">
+                    <div class="yhm-ai-icon" data-page-node-id="icon-ai-steward"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-page-node-id="svg-ai-steward"><circle cx="12" cy="12" r="10" data-page-node-id="c1"/><path d="M12 6v6l4 2" data-page-node-id="p3"/></svg></div>
+                    <h3 data-page-node-id="h-ai-steward">AI 智能口腔管家</h3>
+                    <p data-page-node-id="p-ai-steward">7×24 小时智能顾问，提供个性化护理方案、使用提醒与效果追踪，把专业服务变成随身陪伴。</p>
+                </div>
+                <div class="yhm-ai-card" style="--blade-color:#7B6FDE" data-page-node-id="card-ai-brand">
+                    <div class="yhm-ai-icon" data-page-node-id="icon-ai-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-page-node-id="svg-ai-brand"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" data-page-node-id="p4"/></svg></div>
+                    <h3 data-page-node-id="h-ai-brand">AI 品牌搭建</h3>
+                    <p data-page-node-id="p-ai-brand">从品牌定位、视觉系统、VI 手册到产品包装，用 AI 完成品牌从 0 到 1 的体系化搭建。</p>
+                </div>
+                <div class="yhm-ai-card" style="--blade-color:#D4A843" data-page-node-id="card-ai-marketing">
+                    <div class="yhm-ai-icon" data-page-node-id="icon-ai-marketing"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-page-node-id="svg-ai-marketing"><path d="M4 4h16v16H4z" data-page-node-id="p5"/><path d="M8 8h8M8 12h5M8 16h3" data-page-node-id="p6"/></svg></div>
+                    <h3 data-page-node-id="h-ai-marketing">AI 营销获客</h3>
+                    <p data-page-node-id="p-ai-marketing">AI 生成朋友圈文案、案例包装与营销短句，批量生产内容，持续触达目标用户。</p>
+                </div>
+                <div class="yhm-ai-card" style="--blade-color:#7B6FDE" data-page-node-id="card-ai-ops">
+                    <div class="yhm-ai-icon" data-page-node-id="icon-ai-ops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-page-node-id="svg-ai-ops"><circle cx="12" cy="12" r="3" data-page-node-id="c2"/><circle cx="12" cy="12" r="9" data-page-node-id="c3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6" data-page-node-id="p7"/></svg></div>
+                    <h3 data-page-node-id="h-ai-ops">AI 企业运营管理</h3>
+                    <p data-page-node-id="p-ai-ops">搭建品牌工作台与知识库，把招商、门店、供应链等资料结构化沉淀，支撑团队高效协作。</p>
+                </div>
+                <div class="yhm-ai-card" style="--blade-color:#D4A843" data-page-node-id="card-ai-assets">
+                    <div class="yhm-ai-icon" data-page-node-id="icon-ai-assets"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-page-node-id="svg-ai-assets"><circle cx="12" cy="8" r="4" data-page-node-id="c4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" data-page-node-id="p8"/></svg></div>
+                    <h3 data-page-node-id="h-ai-assets">AI 数字资产</h3>
+                    <p data-page-node-id="p-ai-assets">生成无版权 AI 模特、场景视觉与品牌素材库，规避肖像权风险，让品牌随时有内容可用。</p>
+                </div>
+            </div>
+
+            <div class="yhm-disclaimer" data-reveal data-page-node-id="rGIMDbThoqFIzxE451HKnx">
+                <strong data-page-node-id="mEnkqKxEoeavmqLLBX9P9I">合规说明：</strong>雅汇美为口腔美容护理产品，非药品、非医疗器械。牙齿焕白效果因个体口腔基础、外源性色素情况与使用习惯而异，有明显口腔问题时建议优先进行专业检查。
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" data-page-node-id="H00vjhvXzBcezGHFKAc3Z4">
+        <div class="cta-inner" data-reveal data-page-node-id="GFqGcXEmQvgSKNNq3o4ylS">
+            <h2 data-page-node-id="HnczkdkdiKIOc7ILxubJQE">让你的品牌，也拥有「AI 原生」的增长引擎</h2>
+            <p data-page-node-id="45B6QzGDHF1ZOM328okIEn">AI 诊断 · AI 管家 · AI 品牌 · AI 营销 —— 博斯企培帮你从 0 到 1 搭建美业与大健康品牌</p>
+            <a href="contact.html" class="btn btn--primary" style="font-size:0.95rem;padding:14px 40px;" data-page-node-id="yFB8mROQt6TZvOaKDCZo0G">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;margin-right:8px;" data-page-node-id="CZOcR2uo2mIRNPDWlDeic7"><circle cx="11" cy="11" r="8" data-page-node-id="96DE2cFuIRxcW3NWz2F2Dq"/><line x1="21" y1="21" x2="16.65" y2="16.65" data-page-node-id="KjHfR4VVfPguqtv57fMKsr"/></svg>
+                咨询 AI 品牌孵化
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer" data-page-node-id="59LBQM8nnrOjRbqRxtde5f">
+        <div class="container" data-page-node-id="MwpmzractOCHjI4fBRiEwT">
+            <div class="footer-top" data-page-node-id="Tk6w3qelNMyegHdZE1vUnB">
+                <div class="footer-brand" data-page-node-id="pB95J0X9bhE18LdnQxTRZ4">
+                    <div class="nav-logo" data-page-node-id="OAWmleR8MPnd6911RJTdNw"><img src="logo-bossaigc.png" alt="BOSSAIGC" class="nav-logo-icon" data-page-node-id="kurPxnhPZwBhGbuhMb7Cbj"><div class="nav-logo-text" data-page-node-id="2SSjjbM86aGUl8Vy4Nwc2t">BOSSAIGC</div></div>
+                    <p class="footer-slogan" data-page-node-id="oymy3fdAf7sVKGwqYqwkZR">培养AI人才 · 孵化AI项目 · 开发AI应用 · 赋能企业增长 · 服务产业升级</p>
+                </div>
+                <div class="footer-links-group" data-page-node-id="FXyQLoYzpmlX0icTOAhtmB">
+                    <div class="footer-col" data-page-node-id="VBwxFQACWWAUFepNiAMTi2">
+                        <h4 data-page-node-id="BDo7s0ObQd7B8ilLZ8pYeT">快速导航</h4>
+                        <ul data-page-node-id="Ahp14VXPqR2gLGztTbsfGi">
+                            <li data-page-node-id="KvQrnL0Sv6BwQ5vgyy29Ff"><a href="about.html" data-page-node-id="pMKyAfaUlBOPCDQtoHApeq">关于我们</a></li>
+                            <li data-page-node-id="dyCCi7gTEK0NNBqCAOnuge"><a href="services.html" data-page-node-id="rCSKymlgtr0eKaY6OHnHHt">核心业务</a></li>
+                            <li data-page-node-id="ZAq0dxePDr6Vlr1VeyQTY4"><a href="yahuimei.html" data-page-node-id="0lHAqld5hk52XD4SQ3dAe3">雅汇美 · AI口腔健康美学</a></li>
+                            <li data-page-node-id="DxAd8kEGAx9U8zZ0ZjFWD8"><a href="temu.html" data-page-node-id="Lag8EqkAb3gGywypZR3JPq">AI跨境电商孵化</a></li>
+                            <li data-page-node-id="4vuvhx5IXSjm0fDMdDB2NM"><a href="news.html" data-page-node-id="glmHZtGAv4rZ38kW8BMpX9">新闻中心</a></li>
+                            <li data-page-node-id="hhstV0PNoep8bTZb9TOUYz"><a href="contact.html" data-page-node-id="6a9610jADrYUtviNwqI59c">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col" data-page-node-id="7AOlfZChK4ArLOgEPVgt4g">
+                        <h4 data-page-node-id="TpYmBCx0t2jpDqfCXiR0Ia">运营中心</h4>
+                        <ul data-page-node-id="N8PxgAlF4WUu8R8gqvzpFx">
+                            <li data-page-node-id="ALGEvI3Cfntee9Bs9ByTDc">厦门 · 湖里自贸区悦华路8号</li>
+                            <li data-page-node-id="TxTvjKMhwlFhJJWrasSVBa">漳州 · 龙文区漳华东路333号</li>
+                            <li data-page-node-id="8sXnfB21f5emmbgGdIleqg">福州 · 台江区榕金大厦7楼</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-col--qr" data-page-node-id="LScZT85EnigkY9VbUEdjVV">
+                        <h4 data-page-node-id="32RZlmjf3yejMxbxD6WQiI">微信联系</h4>
+                        <div class="footer-qr-group" data-page-node-id="VNa4n2loF0ftxCSq3LdRwG">
+                            <div class="footer-qr-card" data-page-node-id="1vhemQSwIBRVB2jDYb9IOJ">
+                                <div class="footer-qr-img" data-page-node-id="QtHmXlb9P1bhtxd6ewPKeD">
+                                    <div class="footer-qr-placeholder" data-page-node-id="8oYCoQU4GT5mhij0oPnosT">
+                                        <img src="qr-kloyi.png" alt="BossAiGC_Kloyi 微信二维码" data-page-node-id="gd9aoqNJbbbmdGP1nuOZKM">
+                                    </div>
+                                </div>
+                                <div class="footer-qr-info" data-page-node-id="p3WDQhtHEtycI29vfArr28">
+                                    <span class="footer-qr-name" data-page-node-id="eYh393JmK1jkDPNYtjazsP">BossAiGC_Kloyi</span>
+                                    <span class="footer-qr-phone" data-page-node-id="evgcYpAEVuv8akKyN7AaJk">15396221658</span>
+                                    <span class="footer-qr-role" data-page-node-id="4pZiLYcyYekyT2q7cUnJWh">官方咨询微信</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" data-page-node-id="GGyEfov3DQPRtjcPKNfxql">
+                <p data-page-node-id="rK7uJxG2GJ39Vl16lFt7wz">&copy; 2024-2026 BOSSAIGC · 博斯企培人工智能研究院 · 智航未来（福建）智能科技有限公司 版权所有</p>
+                <p class="footer-credit" data-page-node-id="dhaJSlYWOEUWf95m3VEhVf">制作人：李昱衡 &nbsp; 0代码基础，1天完成从策划到网站落地。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script>
+        /* 兜底：滚动揭示若因预览环境未触发，2.5 秒后强制显示全部 data-reveal 内容
+           正常浏览器中 script.js 的滚动动画仍然生效（2.5s 内早已触发完成） */
+        setTimeout(function () {
+            document.querySelectorAll('[data-reveal]').forEach(function (el) {
+                if (!el.classList.contains('revealed')) el.classList.add('revealed');
+            });
+        }, 2500);
+    </script>
+</body>
+</html>

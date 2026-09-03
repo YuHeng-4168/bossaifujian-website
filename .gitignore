@@ -22,6 +22,9 @@ Icon
 about-team-preview.html
 _test-*.jpg
 
+# 本地备份（不入库）
+archive/
+
 # Thumbs
 Thumbs.db
 ehthumbs.db
