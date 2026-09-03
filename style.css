@@ -1795,6 +1795,148 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ============================
+   TEAM ROWS — V27 横向版式（左图右文）
+   ============================ */
+.team-rows { display: flex; flex-direction: column; gap: 20px; }
+.team-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: 28px 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+.team-row::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--cyan), var(--amber));
+    opacity: 0.7;
+}
+.team-row:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 42px rgba(0, 255, 255, 0.08);
+}
+
+/* 左侧照片 */
+.team-photo { position: relative; }
+.team-photo .photo-frame {
+    position: relative;
+    height: 320px;
+    padding: 4px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--cyan), var(--amber));
+    box-shadow: 0 0 28px rgba(0, 255, 255, 0.18);
+}
+.team-photo .photo-inner {
+    width: 100%; height: 100%;
+    border-radius: 11px;
+    overflow: hidden;
+    background: var(--bg-graphite);
+}
+.team-photo .photo-inner img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    display: block;
+}
+.team-photo .photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, var(--bg-surface), var(--bg-graphite));
+}
+.team-photo .photo-placeholder .ph-char {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--cyan);
+    opacity: 0.45;
+}
+.team-photo .pfc { width: 14px; height: 14px; border-color: var(--cyan); opacity: 0.9; }
+.team-photo .pfc.tl { top: -5px; left: -5px; border-width: 1.5px 0 0 1.5px; border-radius: 2px 0 0 0; }
+.team-photo .pfc.tr { top: -5px; right: -5px; border-width: 1.5px 1.5px 0 0; border-radius: 0 2px 0 0; }
+.team-photo .pfc.bl { bottom: -5px; left: -5px; border-width: 0 0 1.5px 1.5px; border-radius: 0 0 0 2px; }
+.team-photo .pfc.br { bottom: -5px; right: -5px; border-width: 0 1.5px 1.5px 0; border-radius: 0 0 2px 0; }
+.team-row .row-index {
+    position: absolute;
+    top: -10px; left: -10px;
+    z-index: 3;
+    width: 30px; height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, var(--cyan), var(--amber));
+    color: #000;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 16px rgba(0, 255, 255, 0.35);
+}
+
+/* 右侧文字 */
+.team-body { min-width: 0; }
+.team-body .team-head {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.team-body .team-head h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0;
+    letter-spacing: 1px;
+}
+.team-body .team-role {
+    font-family: var(--font-tech);
+    font-size: 0.72rem;
+    color: var(--amber);
+    letter-spacing: 0.5px;
+}
+.team-body .team-intro {
+    font-family: var(--font-tech);
+    font-size: 0.78rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    margin: 0 0 14px;
+}
+.team-rows .team-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 6px 24px;
+    margin: 0 0 14px;
+    padding: 12px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.team-rows .team-highlights li { font-size: 0.7rem; line-height: 1.7; padding: 2px 0 2px 14px; }
+.team-rows .team-motto { margin: 0 !important; font-size: 0.74rem !important; padding: 10px 14px; }
+
+@media (max-width: 1100px) {
+    .team-row { grid-template-columns: 200px 1fr; gap: 24px; padding: 24px; }
+    .team-photo .photo-frame { height: 267px; }
+}
+@media (max-width: 760px) {
+    .team-row { grid-template-columns: 1fr; }
+    .team-photo .photo-frame { width: 220px; height: 293px; margin: 0 auto 18px; }
+    .team-rows .team-highlights { grid-template-columns: 1fr; }
+}
+
+/* ============================
    PROCESS STEPS — V10
    ============================ */
 .process-new { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(0,255,255,0.03); }
