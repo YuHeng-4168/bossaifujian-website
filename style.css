@@ -1868,23 +1868,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .team-photo .pfc.tr { top: -5px; right: -5px; border-width: 1.5px 1.5px 0 0; border-radius: 0 2px 0 0; }
 .team-photo .pfc.bl { bottom: -5px; left: -5px; border-width: 0 0 1.5px 1.5px; border-radius: 0 0 0 2px; }
 .team-photo .pfc.br { bottom: -5px; right: -5px; border-width: 0 1.5px 1.5px 0; border-radius: 0 0 2px 0; }
-.team-row .row-index {
-    position: absolute;
-    top: -10px; left: -10px;
-    z-index: 3;
-    width: 30px; height: 30px;
-    border-radius: 9px;
-    background: linear-gradient(135deg, var(--cyan), var(--amber));
-    color: #000;
-    font-family: var(--font-display);
-    font-weight: 900;
-    font-size: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 16px rgba(0, 255, 255, 0.35);
-}
-
 /* ============================
    右侧文字 — V31 高级感排版
    层次：姓名(锚点竖条) → 职位(琥珀胶囊) → 简介(引言竖线) → 要点(菱形标记+青色关键词) → 金句(渐变条)
