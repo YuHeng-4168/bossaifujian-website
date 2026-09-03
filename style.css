@@ -1557,7 +1557,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* 双栏编辑排版 */
 .split-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 60px;
     align-items: start;
 }
