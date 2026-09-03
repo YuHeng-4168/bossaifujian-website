@@ -1931,27 +1931,31 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     border-left: 1px solid rgba(0, 255, 255, 0.2);
 }
 
-/* 4) 要点 — 青色菱形标记 + 关键词高亮 */
+/* 4) 要点 — V39 单行竖排清单面板（每条独占一行，关键词不再折行截断） */
 .team-rows .team-highlights {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 9px 28px;
-    margin: 0 0 16px;
-    padding: 16px 0 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 18px;
+    padding: 8px 18px;
+    background: linear-gradient(180deg, rgba(0, 255, 255, 0.04), rgba(0, 255, 255, 0.012));
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 12px;
 }
 .team-rows .team-highlights li {
     position: relative;
     font-family: var(--font-tech);
-    font-size: 0.8rem;
-    line-height: 1.75;
+    font-size: 0.82rem;
+    line-height: 2.15;
     color: var(--text-secondary);
-    padding: 2px 0 2px 18px;
+    padding: 0 0 0 20px;
+}
+.team-rows .team-highlights li + li {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .team-rows .team-highlights li::before {
     content: "";
     position: absolute;
-    left: 2px; top: 11px;
+    left: 2px; top: 0.95em;
     width: 5px; height: 5px;
     background: var(--cyan);
     transform: rotate(45deg);
@@ -1988,12 +1992,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     .team-photo .photo-frame { height: 267px; }
     .team-body .team-head h3 { font-size: 1.25rem; letter-spacing: 1.5px; }
     .team-body .team-intro { font-size: 0.82rem; }
-    .team-rows .team-highlights { gap: 8px 20px; }
+    .team-rows .team-highlights { padding: 6px 14px; }
 }
 @media (max-width: 760px) {
     .team-row { grid-template-columns: 1fr; }
     .team-photo .photo-frame { width: 220px; height: 293px; margin: 0 auto 18px; }
-    .team-rows .team-highlights { grid-template-columns: 1fr; }
+    .team-rows .team-highlights { padding: 6px 14px; }
+    .team-rows .team-highlights li { font-size: 0.78rem; line-height: 1.9; }
     .team-body .team-head h3 { font-size: 1.2rem; }
 }
 
