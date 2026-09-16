@@ -1155,6 +1155,68 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
 /* ============================
+   Brand Credo — 品牌主张（V44）
+   位置：首页 CTA 之后、footer 之前
+   ============================ */
+.brand-credo {
+    position: relative;
+    padding: 76px 48px;
+    background: var(--bg-obsidian);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    text-align: center;
+    overflow: hidden;
+}
+.brand-credo::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: 50%;
+    transform: translateX(-50%);
+    width: 200px; height: 1px;
+    background: var(--gradient-flow);
+    opacity: 0.75;
+}
+.brand-credo-inner { max-width: 820px; margin: 0 auto; }
+.brand-credo-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4.6vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    color: var(--text-primary);
+    margin: 0;
+    text-indent: 5px;
+}
+.credo-gold {
+    background: linear-gradient(135deg, #FFB800 0%, #FF6B35 50%, #FFD369 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.brand-credo-sub {
+    margin-top: 18px;
+    font-family: var(--font-tech);
+    font-size: clamp(0.72rem, 1.05vw, 0.88rem);
+    color: var(--text-secondary);
+    letter-spacing: 3px;
+}
+@media (max-width: 768px) {
+    .brand-credo { padding: 52px 24px; }
+    .brand-credo-title { letter-spacing: 2px; text-indent: 2px; }
+    .brand-credo-sub { letter-spacing: 1.5px; }
+}
+/* 窄屏主动分两行（对齐官方 PDF 封底的「不追风口 / 只造浪潮」排法），避免「潮」字孤行 */
+@media (max-width: 560px) {
+    .brand-credo-title {
+        font-size: clamp(1.7rem, 8vw, 2.2rem);
+        letter-spacing: 3px;
+        line-height: 1.35;
+        text-indent: 3px;
+    }
+    .brand-credo-title .credo-gold { display: block; text-indent: 3px; }
+}
+
+/* ============================
    Footer — V10
    ============================ */
 .footer {
