@@ -3801,3 +3801,33 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 768px) {
     .about-entities--four { grid-template-columns: 1fr; }
 }
+
+/* 地址「总部」标识 + 联系页主地址卡突出（V46） */
+.addr-hq {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0 5px;
+    font-family: var(--font-display);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    color: var(--amber);
+    background: var(--amber-dim);
+    border: 1px solid rgba(255, 184, 0, 0.28);
+    border-radius: 3px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.location-card--primary {
+    background: linear-gradient(165deg, rgba(0, 255, 255, 0.07) 0%, var(--bg-card) 58%);
+    border-color: rgba(0, 255, 255, 0.26);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.06);
+}
+.location-card--primary .location-icon {
+    background: rgba(0, 255, 255, 0.16);
+    border-color: rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 16px rgba(0, 255, 255, 0.16);
+}
+.location-card--primary h3 { color: var(--cyan); }
+.location-card--primary p { color: var(--text-secondary); }
